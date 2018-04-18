@@ -2,6 +2,8 @@
 image: linked.jpg
 ---
 
+![Image alt]({{ site.baseurl }}/assets/images/linked.jpg)
+
 A linked list is like an upside down tree. Linked lists connect nodes in defined ways that explain relationships.
 
 This post steps through the process of solving Exercise 4.3 from Chapter 4 in [Eloquent JavaScript, 2nd Edition](http://eloquentjavascript.net/), written by Marijn Haverbeke. The exercise is titled "A List" and requires using JavaScript object lists. This post will cover what an an object list is, how it fits within JavaScript, and how we can use it to resolve Haverbeke's exercise.

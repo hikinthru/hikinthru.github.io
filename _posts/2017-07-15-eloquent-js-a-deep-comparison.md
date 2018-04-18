@@ -2,6 +2,8 @@
 image: difference.png
 ---
 
+![Image alt]({{ site.baseurl }}/assets/images/difference.png)
+
 This post follows the process of solving Exercise 4.4, “A Deep Comparison" in Chapter 4 of [Eloquent JavaScript, 2nd Edition](http://eloquentjavascript.net/), written by Marijn Haverbeke.  We are asked to create a program that can compare two values and determine if they are identical--and if they are not, but they are both objects, determine if they have the same properties. The exercise highlights equality operators, value types, and using recursion to do something more useful than replacing a for or while loop.
 
 - [About the Book](#about-the-book)

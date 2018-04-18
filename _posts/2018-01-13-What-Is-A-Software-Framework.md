@@ -1,6 +1,9 @@
 ---
 image: framework.jpg
 ---
+---
+
+![Image alt]({{ site.baseurl }}/assets/images/framework.jpg)
 
 In beginning to study Web Development the term *framework* is very common, but what does it actually mean? A quick Google search on the term *framework* returns:
 
