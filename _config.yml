@@ -1,0 +1,20 @@
+title: hikinthru
+description: A Small Technical Blog
+google_analytics:
+theme: jekyll-theme-minimal
+author: Sherrie L. Fuqua
+
+
+# Build Settings
+markdown: kramdown
+gems: [bootstrap, autoprefixer-rails, jekyll-assets]
+sass:
+    load_paths:
+        - _sass
+        - node_modules
+exclude: []
+assets:
+   sources:
+     -assets/fonts
+     -assets/images
+     -images

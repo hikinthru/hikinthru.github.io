@@ -1,0 +1,90 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+@font-face {
+  font-family: adler;
+  src: url("/assets/fonts/Adler-88.ttf") format('truetype');
+  //font-weight: bold;
+  font-style: normal;
+}
+
+.photo {
+  float: left;
+  padding-top: 5px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  //padding-left: 0px;
+  height: 85px;
+}
+
+.hikinthru {
+  margin-bottom: -.25em;
+}
+
+.date {
+  color: black;
+  margin-top: 25em;
+}
+
+.scrolling {
+  overflow: auto;
+}
+
+.pad-image {
+  padding-bottom: 1.5em;
+  padding-top: 1em;
+}
+// To remove the space after the Post Title on the Index page
+.post-list { 
+  display: inline; 
+} 
+
+.profile_photo {
+  float: left;
+}
+
+.home-image {
+  padding-bottom: 2em;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: darkslategray;
+}
+
+a:active {
+  text-decoration: none;
+  color: darkslategray;
+}
+
+// Table of Contents
+#toc_container {
+  // background: #f9f9f9 none repeat scroll 0 0;
+  // border: 1px solid #aaa;
+  display: table;
+  font-size: 95%;
+  // margin-bottom: 1em;
+  margin-left: -39px;
+  width: auto;
+}
+
+.toc_title {
+  font-weight: 700;
+  text-align: center;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+  list-style: inside none none !important;
+}

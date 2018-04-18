@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+  {% seo %}
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  <meta name="viewport" content="width=device-width">
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <!-- Left column -->
+    <header class="scrolling">
+      <img class='home-image' src="{{ site.baseurl }}/assets/images/mountain-w-mist.jpg">
+      <!-- Introduction Info -->
+      <div class='hikinthru'>
+        <a href="/index.html"> <img class='home-image' src="{{ site.baseurl }}/assets/images/hikinthru-adler-font.png"> </a>
+      </div>
+      <p>{{ site.description | default: site.github.project_tagline }}<br>
+      by {{ site.author }} </p>
+      <hr>
+
+      <!-- Page Navigation -->
+      <h6><a href="{{ site.baseurl }}/about.html">About</a></h6>
+      <!-- <h6><a href="archive.md">Archive</a></h6> -->
+      <h6><a href="{{ site.github.owner_url }}">GitHub Profile</a></h6>
+      <!-- <h6><a href="fcc.md">freeCodeCamp</a></h6> -->
+      <h6><a href="contact.html">Contact</a></h6>
+      <hr>
+
+      <p><small>This site runs on <strong></strong><a href="https://pages.github.com/">GitHub Pages</a></strong></small></br>
+      <small>&copy;2018 Sherrie L. Fuqua</small></p>
+
+    </header>
+
+    <!-- Main section -->
+    <section>
+      {{ content }}
+    </section>
+
+    <!-- Script -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <footer>
+    </footer>
+    
+  </div> <!-- End wrapper -->
+
+  <!-- Scripts -->
+  <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+  <script src="{{'/node_modules/jquery/dist/jquery.min.js' | prepend: site.baseurl}}"></script>
+	<script src="{{'/node_modules/popper.js/dist/popper.min.js' | prepend: site.baseurl}}"></script>
+	<script src="{{'/node_modules/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl}}"></script>
+
+  {% if site.google_analytics %}
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', '{{ site.google_analytics }}', 'auto');
+      ga('send', 'pageview');
+  </script>
+  {% endif %}
+
+</body>
+</html>

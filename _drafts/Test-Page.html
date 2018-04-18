@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Sherrie L. Fuqua @hikinthru">
+    <meta name="description" content="An introduction to the HTML DOM and JavaScript">
+
+    <title>Understanding the HTML DOM</title>
+
+    <!-- CSS: Bootstrap, Fonts, CSS, Icons, etc -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type='text/css'>
+    <link href="http://sherriefuqua.com/includes/css/stylesheet.css" rel="stylesheet" type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
+    <link rel='shortcut icon' href='../../../favicon.ico' type='image/x-icon'>
+
+  <!-- IE 8 & 9 -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Script -->
+  </head>
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html">@hikinthru</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav pull-right my-nav">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../portfolio/portfolio.html">Portfolio</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../../about/about.html">About</a></li>
+            <li><a href="../../contact/contact.html">Get In Touch</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron blog-jumbotron">
+      <div class="container">
+        <div class='blog-text-jumbotron center-block text-center'>
+          <h1>@hikinthru</h1>
+          <p>Seeing the trees for the woods</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page setup -->
+    <div class="container" id='blog'>
+      <!-- One page row -->
+      <div class='row'>
+
+        <!-- Page header -->
+        <div class='header blog-header'>
+          <h1 class='blog-title'>Understanding the HTML DOM</h1>
+          <p class='lead'>The early Web, JavaScript and the DOM</p>
+        </div>
+        <h4 class='green-bar-100'></h4>
+
+        <!-- Begin article -->
+        <div class="col-sm-8">
+          <div class='content-box-blog'>
+            <article>
+              <div class='small blog-meta'>
+                <p class='blue-f-blog'><strong>Date:</strong> June 1, 2016</p>
+                <p class='blue-f-blog'><strong>Categories:</strong> JavaScript, HTML</p>
+                <p class='blue-f-blog'><strong>Tags:</strong> DOM, internet, WWW history, APIs</p>
+              </div>
+
+              <h4 class='blue-blog-text'>Why Understand the DOM?</h4>
+              <p class='pad-15'>Understanding the HTML DOM is critical for using JavaScript to make dynamic Web pages. Potential employers often ask Front-End applicants to testify or display in some way how well they understand the DOM. This is because everything JavaScript does to a Web page is accomplished by interfacing with it. For the sake of clarification, I should mention that there are actually two DOMs defined by <a href='https://www.w3.org/TR/WD-DOM/introduction.html'>W3C</a> (click the link for an article about the differences), one for XML documents and one for HTML documents. This is a brief introduction to the HTML DOM.</p>
+
+              <h5><span class='bldr'>Contents</span></h5>
+              <ul class='contents'>
+                <li><a href='#history'>A Short History of Web</a></li>
+                <li><a href='#enter'>Enter the DOM</a></li>
+                <li><a href='#api'>An API</a></li>
+                <li><a href='#access'>Accessing the DOM</a></li>
+                <li><a href='#conclusion'>Conclusion</a></li>
+                <li><a href='#resources'>Resources and References</a></li>
+              </ul>
+
+              <span id='history' class='anchor'></span>
+              <h4 class='blue-blog-text'>A Short History of Web</h4>
+              <div class='www'></div>
+              <p>Although early work was done that led up to the final product, the World Wide Web as we know it was invented and implemented in the late eighties and early nineties. It was a new and unique type of communication over the 'new' internet, which preceded the Web by several years. The internet was already being used for newsgroups (Usenet), email, file transfers and a few other things, mostly for the government and a few schools. Distinct from the existing internet traffic, the WWW portion of the internet would use a completely new protocol that defined how this communication worked, HTTP. The definition of the Web you'll most commonly find online is essentially, "all of the documents on servers on the internet that are connected with HTTP."</p>
+
+              <p><img src='../../../images/blog/tim-berners-lee_163x180.jpg' alt='Tim Berners-Lee' class='alignleft tbl-image'>The WWW was the product of a European scientist named Tim Berners-Lee. He designed it for researchers to share their work with each other. Therefore in the early days, the Web was primarily academic texts connected to each other over the nascent internet backbone, which then mostly ran between a few academic and government institutions.</p>
+
+              <p>These early documents on the Web were completely static pages that could only be read. This was quite useful for sharing academic research and government papers, but far short of what we know today as THE Web.</p>
+
+              <p>In 1993 the first broadly used graphical Web browser, Mosaic, was released. Mosaic brought multimedia--images, sounds and video--to regular users. Mosaic soon begat Netscape, released in 1994, and the Web began to grow in content and public access exponentially.</p>
+
+              <p><img src='../../../images/blog/Netscape_logo_57x55.jpg' alt='Netscape logo' class='alignright netscape-image'>JavaScript was created by Netscape in 1995, originally to manage the then popular Java applets providing animation in Web pages. As use of the World Wide Web grew in the mid-nineties, the Netscape team recognized the need for a more interactive and engaging experience for users. They envisioned a programming language that would allow Web pages to be manipulated on demand. This new tool would be able to react to events anywhere in the Web page (like clicks from a growingly common mouse, with Microsoft’s release of the graphical Windows 3.1 in 1992), and then through the browser make changes to the actual content of the Web page.</p>
+
+              <p class='pad-25'><img src='../../../images/blog/javascript_100.jpg' alt='Early JavaScript icon' class='alignleft js-image'>JavaScript was enlisted to fill this void. It became the means to allow browsers to make changes to the HTML that defined the Web page, based on user actions (such as allowing users to 'flip' through a series of images on the page). JavaScript brought the ability to make things change with 'click' and 'rollover' mouse events, make custom information requests from the Web server on behalf of the user, push out page updates from the page provider (like news tickers), and even submit forms of information back to Web sites.</p>
+
+              <span id='enter' class='anchor'></span>
+              <h4 class='blue-blog-text'>Enter the DOM</h4>
+              <div class='bridge'>
+                <div class='image-text'>DOM is bridgin it</div>
+              </div>
+              <p>In order for JavaScript to do this amazing magic it had to be able to communicate with the page through the browser. The solution for the this was the DOM or Document Object Model. The DOM provides access to all of the objects within a Web page's HTML. The DOM is a bridge between the JavaScript code and the Web page.</p>
+
+              <p>The DOM defines the nodes within a web page (note: throughout this article and <em>generally</em> with regard to the DOM, the terms node, element, document objects, node objects, or just objects are interchangeable). Everything in an HTML Web page is either a node object or a component of one.</p>
+
+              <p>What differentiates one node from another is that every object has a minimum of three things specified for it: <span class='bldr'>properties</span> that define it, <span class='bldr'>methods</span> that can access it, and <span class='bldr'>events</span> that can trigger a change to it like a mouse click, a keypress, or a page error. These together make each object on the page distinct from any other (unless it is an intentionally replicated object), and therefore individually actionable.</p>
+
+              <p>Examples of DOM nodes include paragraphs, headings, comments, images, lists, footers, divs, spans, meta tags, links, or anything that can be an element within the HTML document.</p>
+
+              <p>The DOM standard is now maintained by the <a href='#'>W3C</a>, like HTML, and is public, so other programming languages can also access it; however JavaScript is still the primary language used by developers to manipulate Web content in pages.</p>
+
+              <p class='pad-25'>The DOM is ephemeral and is created as a page loads and the browser reads the HTML in it. Part of a browser’s job is to read the Web page source and create the DOM for it. The DOM then builds the page for the browser to display and sets the parameters for everything that can happen on the page going forward.</p>
+
+              <span id='api' class='anchor'></span>
+              <h4 class='blue-blog-text'>An API</h4>
+              <div class='castle-door'>
+                <div class='image-text'>Enter my lair...</div>
+              </div>
+              <p>The DOM manages the page by providing an <span class='bldr'>Application Programming Interface</span>, or API, for the JavaScript code to connect to. An API is the 'public' side of a program. It is the DOM's API that JavaScript can access to modify the page. An API acts like a gate to a well-armoured castle. Like a computer port, it allows certain acceptable communications to pass through to the program.</p>
+
+              <p class='pad-25'>So specifically, the API provides access to the <em>public methods</em> that the DOM provides to manipulate each element in the page. As mentioned previously, each element, depending on what it is, has certain things that can be done to it, such as changing the text content (known as <span class='c-f'>innerHTML</span>) of a paragraph or submitting a form when a button is clicked (the <span class='c-f'>.onclick</span> event).</p>
+
+              <span id='access' class='anchor'></span>
+              <h4 class='blue-blog-text'>Accessing the DOM</h4>
+              <h5>An Example:</h5>
+              <pre class='prettyprint'>
+
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;body&gt;
+
+    &lt;!-- HTML begins --&gt;
+    &lt;p&gt;This example uses the HTML DOM to assign an
+       &apos;onclick&apos; event to a button element.&lt;/p&gt;
+
+    &lt;!-- A simple, unstyled HTML button --&gt;
+    &lt;button id=&apos;change_label&apos;&gt;Click me&lt;/button&gt;
+
+    &lt;!-- The JavaScript --&gt;
+    &lt;script&gt;
+      &lt;!-- When the button with the id 'change_label'
+      is clicked, it triggers the function named
+      &apos;myFunction&apos; --&gt;
+      document.getElementById(&apos;change_label&apos;).onclick =
+          function() {myFunction()};
+
+      &lt;!-- This is 'myFunction' --&gt;
+      function myFunction() {
+          document.getElementById(&apos;change_label&apos;).innerHTML =
+          &apos;YOU CLICKED ME!&apos;;
+      }
+    &lt;/script&gt;
+
+    &lt;p style=&apos;padding-top: 8px;&apos;&gt;
+      Refresh the page to run this again!
+    &lt;/p&gt;
+
+  &lt;/body&gt;
+  &lt;/html&gt;
+
+</pre>
+
+              <p><em>Output:</em></p>
+              <div class='code-display'>
+
+                <!-- Begin HTML -->
+                <p>This example uses the HTML DOM to assign an
+                    "onclick" event to a button element.</p>
+
+                <!-- A simple, unstyled HTML button -->
+                <button id="demo">Click me</button>
+
+                <!-- The JavaScript -->
+                <script>
+                document.getElementById("demo").onclick =
+                  function() {myFunction()};
+
+                function myFunction() {
+                    document.getElementById("demo").innerHTML =
+                    "YOU CLICKED ME!";
+                }
+                </script>
+
+                <p style='padding-top: 8px;'>
+                  Refresh the page to run this again!
+                </p>
+              </div>
+
+              <p>This is a complete sample Web page (although for brevity not completely HTML5 complient) that displays a simple paragraph; note that everything inside the <span class='c-f'>&lt;script&gt;</span> and <span class='c-f'>&lt;/script&gt;</span> tags is invisible to the user viewing the page. This is an explanation of the JavaScript:<p>
+
+              <p>
+                <ol>
+                  <li>The script includes two sections, the first begins with <span class='c-f'>document</span>, this is the root-node of and top object in the DOM tree.</li>
+                  <li><span class='c-f'>.getElementById</span> is a <em>method</em> that the DOM provides to manipulate any elements that include a defined <span class='c-f'>id</span> in the page, like the button element above.</li>
+                  <li>The script then provides the <span class='c-f'>id</span> to be affected: <span class='c-f'>change_label.</span></li>
+                  <li><span class='c-f'>.onclick</span> is the <em>event</em> that triggers whatever instructions follow.</li>
+                  <li><span class='c-f'>myFunction</span> is called.</li>
+                  <li>In the second section of the script <span class='c-f'>document.getElementById('change_label')</span> all mean the same as the first section.</li>
+                  <li><span class='c-f'>.innerHTML</span> is a <em>property</em> of all paragraph elements and refers to the text wrapped inside the element (e.g., <span class='c-f'>&lt;p&gt;</span>Any text<span class='c-f'>&lt;/p&gt;</span>).</li>
+                  <li>And the assignment operator <span class='c-f'>=</span> then reassigns the text property of the button to ‘<em>YOU CLICKED ME!</em>’.</li></ol></p>
+
+              <p>All attributes of elements can be changed with JavaScript through the DOM: styles (appearance), content, behaviors (like animations), etc.</p>
+
+              <p class='pad-15'>Events can be triggered by many things such as keypresses, button clicks, hovering over an element (like a tooltip that pops up when your mouse moves over a word or section of a page), the page loading (requiring no interaction from the user) and much more.</p>
+
+              <h5>Another Example:</h5>
+              <pre class='prettyprint lang-css'>
+
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;body&gt;
+
+    &lt;!-- HTML begins --&gt;
+    &lt;div
+
+      &lt;!-- Calling the script functions --&gt;
+      onmouseover=&apos;mOver(this)&apos;
+      onmouseout=&apos;mOut(this)&apos;
+
+      &lt;!-- Formatting the div's display --&gt;
+      class=&apos;center-block&apos;
+      style=&apos;background-color: #D94A38;
+             text-align: center;
+             width: 250px;
+             height: 30px;
+             margin-bottom: 15px;
+             padding: 20px 0 40px 0;&apos;&gt;
+
+      &lt;!-- The text to display --&gt;
+      &lt;p&gt;Move your mouse over me!&lt;/p&gt;
+
+      &lt;!-- Inline script --&gt;
+      &lt;script&gt;
+        function mOver(obj) {
+          obj.innerHTML = &apos;Thanks!&apos;
+        }
+        function mOut(obj) {
+          obj.innerHTML = &apos;You left me!&apos;
+        }
+      &lt;/script&gt;
+
+    &lt;/div&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+
+</pre>
+
+              <p><em>Output:</em></p>
+              <div class='center-block'
+                   onmouseover='mOver(this)'
+                   onmouseout='mOut(this)'
+                   style='background-color: #D94A38;
+                          text-align: center;
+                          width: 250px;
+                          height: 30px;
+                          margin-bottom: 15px;
+                          padding: 20px 0 40px 0;'>
+                   <p>Move your mouse over me!<p>
+              <script>
+                function mOver(obj) {
+                  obj.innerHTML = 'Thanks!'
+                }
+                function mOut(obj) {
+                  obj.innerHTML = 'You left me!'
+                }
+              </script>
+              </div>
+
+              <p>This example begins with a formatted (styled) div containing a paragraph element with the text 'Move your mouse over me!'. The script section contains two actions (i.e., <em>methods</em>) that can be executed to change the div's properties, <span class='c-f'>mOver(obj)</span> and <span class='c-f'>mOut(obj)</span>. These are tied to two events defined in the HTML at the beginning of the div, <span class='c-f'>onmouseover</span> and <span class='c-f'>onmouseout</span>.</p>
+
+              <p>When the mouse cursor moves over (i.e., 'into') the div:
+                <ol>
+                  <li><span class='c-f'>onmouseover</span> triggers the method <span class='c-f'>mOver(obj)</span> in the script.</li>
+                  <li><span class='c-f'>mOver(obj)</span> re-assigns the text property of the paragraph element <span class='c-f'>&lt;p&gt;</span> to a new value.</li>
+                  <li>When the mouse moves out of the element, <span class='c-f'>onmouseout</span> triggers another event from the function <span class='c-f'>mOut(obj)</span>, again reassigning the element's text (<span class='c-f'>.innerHTML</span>) property.</li>
+                </ol>
+              </p>
+
+              <p>This example displays one of a number of ways to implement the common practice of modifying elements on a page when the mouse moves across them. For example, most people are familiar with a button changing (getting a glow or getting a bit larger, etc.) when your mouse passes over it.</p>
+
+              <p class='pad-25'>These examples show how JavaScript is used to access the DOM and change the content of the page. JavaScript is a programming language with wide capabilities today, but it is at its best when creating 'magic' on Web pages.</p>
+
+              <span id='conclusion' class='anchor'></span>
+              <h4 class='blue-blog-text'>Conclusion</h4>
+              <p>That is a brief introduction to what the DOM does and is for, and why understanding it is an integral part of Web Development and learning JavaScript. I hope that you found it informative. There is a list of links below with much more information about the DOM and JavaScript and this is far from the last time I will discuss them.</p>
+
+              <p>Feel free to leave a comment if you have any questions.</p>
+
+              <p class='pad-25'>Thanks for reading.</p>
+
+              <span id='resources' class='anchor'></span>
+              <h4 class='blue-blog-text'>Resources and References:</h4>
+              <ul class='resource-list'>
+                <li><a href='https://www.w3.org/DOM/'>The W3C's DOM definition page</a></li>
+                <li><a href='https://www.w3.org/2002/07/26-dom-article.html#history'>A history of the DOM from the W3C</a></li>
+                <li><a href='http://www.w3schools.com/js/js_htmldom.asp'>JavaScript HTML DOM</a></li>
+                <li><a href='http://archive.oreilly.com/pub/a/JavaScript/2001/04/06/js_history.html'>JavaScript: How Did We Get Here?</a></li>
+                <li><a href='http://erikstech.com/history-world-wide-web/'>History of the World Wide Web at Erik's Tech Blog</a></li>
+                <li class='pad-30'><a href='https://en.wikipedia.org/wiki/Node_(computer_science)'>Wikipedia: Node (computer science)</a></li>
+
+            </article>
+
+            <!-- Begin comment form -->
+            <h4 class='blue-100-blog'></h4>
+            <div id='contact'>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class='comment-box'>
+                    <p class='lead comment'>Send a Comment</p>
+
+                    <!-- form -->
+                    <form id="contact-form" method="post" action="contact.php" role="form">
+                      <div class="messages"></div>
+                      <div class="controls">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <label for="form_name">Name</label>
+                              <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your name" required="required" data-error="Name is required.">
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <label for="form_email">Email</label>
+                              <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email" required="required" data-error="Valid email is required.">
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                        </div> <!-- row -->
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <div class="form-group">
+                              <label for="form_message">Comment (including which article)</label>
+                              <textarea id="form_message" name="message" class="form-control" placeholder="Please enter a comment" rows="4" required="required" data-error="Please,leave a comment."></textarea>
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                          <div class="col-sm-12">
+                            <input type="submit" class="btn btn-default btn-send pad-15 text-muted" value="Send message">
+                          </div>
+                        </div> <!-- row -->
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <p class="text-muted"><span class='bldr'>*</span> Required.</p>
+                          </div>
+                        </div> <!-- row -->
+                      </div> <!-- controls -->
+              </form>
+                    </div> <!-- comment-box -->
+                  </div> <!-- col-sm-12 -->
+                </div> <!-- row -->
+
+            </div> <!-- contact form -->
+          </div> <!-- End content-box-blog -->
+        </div> <!-- End 8-col -->
+
+        <!-- Start side-bar -->
+        <div class='col-sm-4 side-bar-container-blog content-box'>
+          <h5 class='topic'>Recent Articles</h5>
+          <div class='h_line'></div>
+          <ul class='side-lists'>
+            <li><a href='#'>Understanding the HTML DOM</a></li>
+            <li><a href='eloquent-js-a-list.html'>Eloquent JS: A List</a></li>
+            <li><a href='eloquent-js-a-deep-comparison.html'>Eloquent JS: A Deep Comparison</a></li>
+          </ul>
+          <h5 class='topic'>Categories</h5>
+          <div class='h_line'></div>
+          <ul class='side-lists'>
+            <li><a href='../topics/javascript.html'>JavaScript</a></li>
+            <li><a href='../topics/jquery.html'>jQuery</a></li>
+            <li><a href='../topics/html.html'>HTML</a></li>
+            <li><a href='../topics/css.html'>CSS</a></li>
+            <li><a href='../topics/web.html'>The Web</a></li>
+            <li><a href='../topics/other-technology.html'>Other Technology</a></li>
+          </ul>
+          <h5 class='topic tags-topic'>Tags</h5>
+          <div class='h_line'></div>
+          <ul class='side-lists tag-list'>
+            <li><a href='topics/dom.html'>DOM | </a></li>
+            <li><a href='topics/www-history.html'>WWW history | </a></li>
+            <li><a href='topics/internet.html'>internet | </a></li>
+            <li><a href='topics/linked-lists.html'>linked lists | </a></li>
+            <li><a href='topics/eloquent-javascript.html'>Eloquent JavaScript | </a></li>
+            <li><a href='topics/recursion.html'>recursion | </a></li>
+            <li><a href='topics/identity.html'>identity | </a></li>
+            <li><a href='topics/value-types.html'>value types | </a></li>
+            <li><a href='topics/equality.html'>equality operators | </a></li>
+            <li><a href='topics/apis.html'>APIs</a></li>
+          </ul>
+        </div> <!-- End sidebar column -->
+
+      </div> <!-- End page row -->
+    </div> <!-- End page container -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p class="alignleft text-muted copy">&copy; Sherrie Fuqua 2016</p>
+        <ul id="socIcons" class="alignright list-inline">
+          <li> <a href="mailto:contact@sherriefuqua.com"><img src='../../../images/mail.png' alt='Email link' /></a></li>
+          <li> <a href="https://www.facebook.com/hikinthru" target="_blank"><img src='../../../images/facebook-square.png' alt='Facebook link' /></a></li>
+          <li> <a href="http://hikinthru.github.io/" target="_blank"><img src='../../../images/github.png' alt='GitHub link' /></a></li>
+          <li> <a href="https://www.linkedin.com/in/slfuqua" target="_blank"><img src='../../../images/linkedin.png' alt='LinkedIn link' /></a></li>
+          <li> <a href="https://twitter.com/hikinthru" target="_blank"><img src='../../../images/twitter.png' alt='Twitter link' /></a></li>
+        </ul>
+        <div style="clear: both;"></div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../../includes/js/jquery-1.11.3.js"></script>
+    <script src="../../../includes/js/jquery-2.1.4.js"></script>
+    <script src="../../../includes/js/bootstrap.js"></script>
+    <script src="../../../includes/js/script.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+  </body>
+</html>
