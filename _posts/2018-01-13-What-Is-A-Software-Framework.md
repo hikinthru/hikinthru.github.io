@@ -1,11 +1,11 @@
 ---
 image: framework.jpg
+title: "What Is A Software Framework?"
 ---
----
-
-![Image alt]({{ site.baseurl }}/assets/images/framework.jpg)
 
 In beginning to study Web Development the term *framework* is very common, but what does it actually mean? A quick Google search on the term *framework* returns:
+
+![Image alt]({{ site.baseurl }}/assets/images/framework.jpg)
 
 > a basic structure underlying a system, concept, or text.
 

@@ -1,10 +1,11 @@
 ---
 image: linked.jpg
+title: Eloquent JS - A List
 ---
 
-![Image alt]({{ site.baseurl }}/assets/images/linked.jpg)
-
 A linked list is like an upside down tree. Linked lists connect nodes in defined ways that explain relationships.
+
+![Image alt]({{ site.baseurl }}/assets/images/linked.jpg)
 
 This post steps through the process of solving Exercise 4.3 from Chapter 4 in [Eloquent JavaScript, 2nd Edition](http://eloquentjavascript.net/), written by Marijn Haverbeke. The exercise is titled "A List" and requires using JavaScript object lists. This post will cover what an an object list is, how it fits within JavaScript, and how we can use it to resolve Haverbeke's exercise.
 
@@ -27,11 +28,9 @@ This post steps through the process of solving Exercise 4.3 from Chapter 4 in [E
 
 In JavaScript a list is not a defined and standardized object type in the same sense as say an array, or as in other programming languages like Python. It is just one way of using JavaScript objects, due to their versatility, to build certain data structures. A 'linked list' (generally referred to here on as just 'list') is two or more JavaScript objects with relationships, or connections, between them. The fact that they have relationships with other objects in this way, makes them list objects. These connections can be linear (as in our exercise and Fig. 2 below), or can form trees (like family or phylogenetic trees), data lists, even types of graphs like this:
 
-
 ![Graph of a Bayesian Network](/images/bayesian-networks.png)
 
-*Fig. 1 - Graph of a Causal Bayesian Network*
-
+*Fig. 1 -* *Graph of a Causal Bayesian Network*
 
 This is a causal graph that is a type of Bayesian Network. It is built using the concept of linked objects. If your aren’t a mathematician and you’ve still heard the term Bayesian before it is likely because Bayesian filters were a revolution in spam filtering in the late nineties and early 2000s. The Bayesian Network above is a type of acyclic graph that can be built with object lists, using their relationships. This makes object or linked lists, far more interesting (and useful) than is explained in the book.
 
@@ -49,7 +48,7 @@ For a more thorough explanation of linked lists, which I’d advise before tackl
 
 ![A screenshot of the instructions](/images/eloquent-js-ex.4.3.jpg)
 
-*Fig. 3 - From Chapter 4, Exercise 4.3 - Eloquent JavaScript*
+*Fig. 3 - From Chapter 4,* *Exercise 4.3 - Eloquent JavaScript*
 
 1. Write a function ``arrayToList`` that builds up a data structure like the previous one [see above] when given [1, 2, 3] as argument.
 1. Write a ``listToArray`` function that produces an array from a list.

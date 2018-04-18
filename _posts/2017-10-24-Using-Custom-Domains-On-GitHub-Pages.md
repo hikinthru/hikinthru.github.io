@@ -1,10 +1,11 @@
 ---
 image: domain.jpg
+title: "Using Custom Domains On GitHub Pages"
 ---
 
-![Image alt]({{ site.baseurl }}/assets/images/domain.jpg)
-
 Configuring your domain name to point to GitHub Pages involves three steps, the first at GitHub in the blog repository (your_username.github.io), and the next two at your domain registrar. These are the steps with GoDaddy as the registrar.
+
+![Image alt]({{ site.baseurl }}/assets/images/domain.jpg)
 
 ## In the github.io repository, edit or create the CNAME file in the root
 

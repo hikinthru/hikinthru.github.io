@@ -1,6 +1,6 @@
 ---
 image: difference.png
-title: 'Eloquent JS A Deep Comparison'
+title: 'Eloquent JS - A Deep Comparison'
 ---
 
 This post follows the process of solving Exercise 4.4, “A Deep Comparison" in Chapter 4 of [Eloquent JavaScript, 2nd Edition](http://eloquentjavascript.net/), written by Marijn Haverbeke.  We are asked to create a program that can compare two values and determine if they are identical--and if they are not, but they are both objects, determine if they have the same properties. The exercise highlights equality operators, value types, and using recursion to do something more useful than replacing a for or while loop.
@@ -28,9 +28,7 @@ This post follows the process of solving Exercise 4.4, “A Deep Comparison" in 
 ## The Instructions
 
 > The == operator compares objects by identity. But sometimes, you would prefer to compare the values of their actual properties.
-
 > Write a function, deepEqual, that takes two values and returns true only if they are the same value or are objects with the same properties whose values are also equal when compared with a recursive call to deepEqual.
-
 > To find out whether to compare two things by identity (use the === operator for that) or by looking at their properties, you can use the typeof operator. If it produces object for both values, you should do a deep comparison. But you have to take one silly exception into account: by a historical accident, typeof null also produces "object".
 
 So our steps are (and we will discuss these thoroughly as we go through them):

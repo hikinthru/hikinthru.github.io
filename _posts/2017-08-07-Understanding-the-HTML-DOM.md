@@ -1,10 +1,11 @@
 ---
 image: dom.jpg
+title: Understanding the HTML DOM
 ---
 
-![Image alt]({{ site.baseurl }}/assets/images/dom.jpg)
-
 The HTML DOM is the lense through which our code to create a Web page is viewed by the Web browser. Understanding the HTML DOM is critical for using JavaScript to make dynamic Web pages. Potential employers often ask Front-End applicants to explain how well they understand the DOM because everything JavaScript does to a Web page is accomplished by interfacing with it. This article explains the connection.
+
+![Image alt]({{ site.baseurl }}/assets/images/dom.jpg)
 
 - [Before the DOM: A Short Introduction to the Web](#before-the-dom-a-short-introduction-to-the-web)
     - [The Internet](#the-internet)
@@ -29,7 +30,7 @@ The Internet is simply a group of computers with connections to each other. The 
 
 ![An image of the early ARPANET](http://sherriefuqua.com/pages/articles/dom/images/arpanet-original.jpg)
 
-*A 1969 Map of the Entire Internet*
+*A 1969 Map of* *the Entire Internet*
 
 These connections used dedicated communication lines between special computers (early routers) at each site to transfer, direct and process the communication. The early projects were funded by the US government. Because of the immense convenience for research collaboration these connections, known then as the ARPANET (Advanced Research Projects Agency Network), began to grow in demand. 
 
