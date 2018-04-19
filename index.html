@@ -10,7 +10,7 @@ permalink: index.html
 
   <h2>Articles</h2>
   {% for post in site.posts %}
-    <img class='pad-image' src="{{ site.baseurl }}/assets/images/{{ post.image }}">
+    <a href="{{ post.url }}"><img class='pad-image' src="{{ site.baseurl }}/assets/images/{{ post.image }}"></a>
     <h4 class="post-list"><a href="{{ post.url }}">{{ post.title }}</a></h4>
     <p><span class='date'>{{ post.date | date: "%B %-d, %Y" }}</span><br>
       {{ post.excerpt | strip_html | strip_newlines | truncate: 200 }}  

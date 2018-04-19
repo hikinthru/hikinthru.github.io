@@ -5,9 +5,9 @@ title: "What Is A Software Framework?"
 
 In beginning to study Web Development the term *framework* is very common, but what does it actually mean? A quick Google search on the term *framework* returns:
 
-![Image alt]({{ site.baseurl }}/assets/images/framework.jpg)
-
 > a basic structure underlying a system, concept, or text.
+
+![Image alt]({{ site.baseurl }}/assets/images/framework.jpg)
 
 My first experience with the concept of a software framework was Bootstrap. I learned that Bootstrap had a great approach to laying out pages and getting components within them to line up nicely vertically (mostly) and horizontally, without using HTML tables. It also had other perks pre-built like jumbotrons for headers and navigation banners that were mobile responsive (collapsible on reducing the screen size), pretty easy to implement and looked great. But I still had no idea what a "framework" actually was.
 
