@@ -4,6 +4,8 @@ title: About
 permalink: about.html
 ---
 
+The site is at [http://hikinthru.com](http://hikinthru.com)
+
 ## About me
 
 Online my username and alias is 'hikinthru' and is how I can be located on Facebook, Twitter, GitHub, FreeCodeCamp, StackExchange and other social and development sites to which I contribute.
