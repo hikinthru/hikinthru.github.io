@@ -11,7 +11,7 @@ I did a bit of research and finally expanded the notes on what I found to this a
 
 ---
 
-#### Contents
+### Contents
 
 - [Terms](#terms)
 - [Attributes of *All* Containers](#attributes-of-all-containers)
@@ -20,7 +20,7 @@ I did a bit of research and finally expanded the notes on what I found to this a
 - [The `collections` Module](#the-collections-module)
 - [Built-in vs. Imported Object Types and Functions](#built-in-vs-imported-object-types-and-functions)
 
-## Terms
+### Terms
 
 All three of these terms in Python most generally refer to ways of placing data into sets that can be operated on. Examples of types of data sets in Python include dictionaries (`my_dict = {"uno":"one", "dos":"two"}`), lists (`my_list = [3, 4, "five"]`) or tuples (`my_tuple = (6, 7, "zed")`). 
 
@@ -32,7 +32,7 @@ All containers are a type of collection in the technical sense that to determine
 
 But you can also import the Python module `collections` to add additional container types to the *built-in containers* (e.g., `list`, `dict`, `tuple`, etc. that do not need to be imported). These additional types (e.g., `deque`, `Counter`, `defaultdict`) are often directly referred to as collections, even though they are really just containers with modified or additional functions.
 
-## Attributes of *All* Containers
+### Attributes of *All* Containers
 
 * Objects which have a `__contains__` method defined
 * `isinstance(object, collections.Container)` returns `True`
@@ -42,7 +42,7 @@ See also:
 [PyDocs 3.6.5 - Built-in Types](https://docs.python.org/3/library/stdtypes.html)  
 [PyDocs 3.6.5 - Data Structures](https://docs.python.org/3/tutorial/datastructures.html)
 
-## Built-in Container Types
+### Built-in Container Types
 
 According to [PyDocs 3.6.5 on Container datatypes](https://docs.python.org/3.6/library/collections.html), Python’s general purpose built-in containers are: `dict`, `list`, `set`, and `tuple`. Four additional built-in container types mentioned in [PyDocs 3.6.5 - Built-in Types](https://docs.python.org/3/library/stdtypes.html) include `str`, `range`, `frozenset` and `bytearray`.
 
@@ -60,7 +60,7 @@ According to [PyDocs 3.6.5 on Container datatypes](https://docs.python.org/3.6/l
 * *Map* type containers
   - Dictionaries
 
-## NOT Containers
+### NOT Containers
 
 Checked builtin object types which are **not** containers:
 `isinstance(object, collections.Container` returns `False`:
@@ -74,7 +74,7 @@ Checked builtin object types which are **not** containers:
 * Buffer objects
 * The None object
 
-## The `collections` Module
+### The `collections` Module
 
 The Python module `collections` can be imported (like `math`) to add additional collection/container types available. The types in Python 3.5.6 are listed here.
 
@@ -90,7 +90,7 @@ The Python module `collections` can be imported (like `math`) to add additional 
 | UserList | wrapper around list objects for easier list subclassing
 | UserString | wrapper around string objects for easier string subclassing
 
-## Built-in vs. Imported Object Types and Functions
+### Built-in vs. Imported Object Types and Functions
 
 When the Python interpreter begins running it loads a lot of functionality into the running computer's memory (RAM). But to keep from being a memory hog it must pick and choose (or rather its developers already have) what functionality will be loaded by default. We essentially get a 'base model' when we start Python. Everything in this base model is considered 'builtin.'
 
