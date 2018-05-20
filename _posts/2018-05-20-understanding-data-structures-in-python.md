@@ -3,12 +3,13 @@ image: card-file.jpg
 title: Understanding Data Structures, Containers and Collections in Python
 ---
   
-When I first began programming in Python I was sometimes confused by the way different authors and online sources referred to the various ways of holding, manipulating and processing sets of data. Three terms that I was not completely sure always referred to the same thing kept coming up: **data structures**, **containers**
-and **collections**. I did a bit of research and finally expanded my notes out to this article. I do not go into any detail about the functionality of any of the specific container types in Python here (eg., `list`, `deque`, `tuple`, etc.).
+When I first began programming in Python I was sometimes confused by how different authors and online sources referred to the various ways of holding, manipulating and processing sets of data. Three terms that kept coming up were **data structures**, **containers** and **collections**, and I was not completely sure they were always referring to the same things, even in technical documents. 
+
+I did a bit of research and finally expanded the notes on what I found to this article. This is a disambiguation of the three terms, I do not address the functionality of specific container types in Python here (eg., `list`, `deque`, `tuple`, etc.).
 
 ![Image alt]({{ site.baseurl }}/assets/images/card-file.jpg) 
 
-##### Contents
+#### Contents
 
 - [Terms](#terms)
 - [Attributes of *All* Containers](#attributes-of-all-containers)
@@ -19,13 +20,13 @@ and **collections**. I did a bit of research and finally expanded my notes out t
 
 ## Terms
 
-Most generally all of these terms in Python refer to ways of placing data into sets. Examples of types of data sets in Python include dictionaries (`my_dict = {"uno": "one", "dos": "two"}`), lists (`my_list = [3, 4, "five"]`) or tuples (`my_tuple = (6, 7, "zed")`). 
+All of these terms in Python most generally refer to ways of placing data into sets that can be operated on. Examples of types of data sets in Python include dictionaries (`my_dict = {"uno":"one", "dos":"two"}`), lists (`my_list = [3, 4, "five"]`) or tuples (`my_tuple = (6, 7, "zed")`). 
 
-The term **data structure** is used informally to refer to both **container**s and **collection**s. Regarding the latter two however, in one way containers are a type of collection and in another collections are types of containers.
+First I learned that the term **data structure** is used informally (even in official Python Documentation) to correctly refer to both or either of `container` and `collections`. I then learned that regarding the latter two, in one way containers are a type of collection and in another collections are types of containers.
 
-This is because there are two types of native containers in Python. One set are called **built-ins** and the other are **imported** if they are needed by the programmer. If you are not sure of the difference between these see [this](#built-in-vs-imported-object-types-and-functions) explanation below.
+This is because all containers (generally) fall in to one of two groups in Python. One group is called **builtins**, the others are **imported**. If you are not sure about the difference between the idea of 'builtin' vs. 'imported' see [this](#built-in-vs-imported-object-types-and-functions) explanation below.
 
-All containers are a type of collection in the technical sense that to determine if an object is a container, you ask Python, `isinstance(object, collections.Container)`. Which implies that by definition all containers are a Python sub-class of the class `collections`.
+All containers are a type of collection in the technical sense that to determine if an object, for example `my_list` is a container, you ask Python, `isinstance(object, collections.Container)`. Which implies that by definition all containers are a Python sub-class of the class `collections`.
 
 But you can also import the Python module `collections` to add additional container types to the *built-in containers* (e.g., `list`, `dict`, `tuple`, etc. that do not need to be imported). These additional types (e.g., `deque`, `Counter`, `defaultdict`) are often directly referred to as collections, even though they are really just containers with modified or additional functions.
 
