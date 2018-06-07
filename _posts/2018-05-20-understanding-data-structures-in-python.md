@@ -3,9 +3,9 @@ image: card-file.jpg
 title: Understanding Python Data Structures, Containers and Collections
 ---
   
-When I first began programming in Python I was sometimes confused by how different authors and online sources referred to the various ways of holding, manipulating and processing sets of data. Three terms that kept coming up were **data structures**, **containers** and **collections**, and I was not completely sure they were always referring to the same things, even in technical documents. 
+When I first began programming in Python I was sometimes confused by the way different authors and online sources referred to the various ways of holding, manipulating and processing sets of data. Three terms that kept coming up were **data structures**, **containers** and **collections**, and I was not completely sure they were always referring to the same things, even in technical documents. 
 
-I did a bit of research and finally expanded the notes on what I found to this article. This post is simply a disambiguation of the three terms, it does not address the functionality of specific container types in Python here (eg., `list`, `deque`, `tuple`, etc.).
+I did a bit of research and this article came out of that. This does not address the functionality of specific container types in Python here such as `list`, `deque`, `tuple`, etc., it simply clarifies the methods of organization of groups of data and the associated terminology.
 
 ![Image alt]({{ site.baseurl }}/assets/images/card-file.jpg) 
 
@@ -22,17 +22,19 @@ I did a bit of research and finally expanded the notes on what I found to this a
 
 ### Terms
 
-All three of these terms in Python most generally refer to ways of placing data into sets that can be operated on. Examples of types of data sets in Python include dictionaries (`my_dict = {"uno":"one", "dos":"two"}`), lists (`my_list = [3, 4, "five"]`) or tuples (`my_tuple = (6, 7, "zed")`). 
+At base, all three of these terms in Python refer to ways of placing data into sets that can be operated on. Three examples of types of data grouping in Python include dictionaries (`my_dict = {"uno":"one", "dos":"two"}`), lists (`my_list = [3, 4, "five"]`) and tuples (`my_tuple = (6, 7, "zed")`). 
 
-First I learned that the term **data structure** is used informally (even in official Python Documentation) to correctly refer to both or either of `container` and `collections`. I then learned that regarding the latter two, in one way containers are a type of collection and in another collections are types of containers.
+I came to realize that the term **data structure** is used informally (even in official Python Documentation) to refer to *both or either* of `container` and `collections`. I then learned that regarding these, in one way containers are a type of collection and in another collections are types of containers.
 
-I realized that this is because all containers (generally) fall in to one of two groups in Python. One group is called **builtins** and the others are **imported**. If you are not sure about the difference between the idea of 'builtin' vs. 'imported' see [this](#built-in-vs-imported-object-types-and-functions) explanation below.
+This sounds confusing, but it is because all containers (generally) fall in to one of two groups in Python. One group is called **builtins** and the others are **imported**. If you are not sure about the difference between the idea of 'builtin' vs. 'imported' see [this](#built-in-vs-imported-object-types-and-functions) explanation below.
 
 All containers are a type of collection in the technical sense that to determine if an object, for example `my_list` is a container, you ask Python, `isinstance(object, collections.Container)`. Which implies that by definition all containers are a Python sub-class of the class `collections`.
 
 But you can also import the Python module `collections` to add additional container types to the *built-in containers* (e.g., `list`, `dict`, `tuple`, etc. that do not need to be imported). These additional types (e.g., `deque`, `Counter`, `defaultdict`) are often directly referred to as collections, even though they are really just containers with modified or additional functions.
 
 ### Attributes of *All* Containers
+
+The following three rules apply to ALL objects that can be considered Python containers:
 
 * Objects which have a `__contains__` method defined
 * `isinstance(object, collections.Container)` returns `True`
@@ -62,7 +64,7 @@ According to [PyDocs 3.6.5 on Container datatypes](https://docs.python.org/3.6/l
 
 ### NOT Containers
 
-Checked builtin object types which are **not** containers:
+This is a list of built-in object types which are **not** containers:
 `isinstance(object, collections.Container` returns `False`:
 
 * Int objects
