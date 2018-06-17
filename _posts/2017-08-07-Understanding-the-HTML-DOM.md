@@ -5,7 +5,7 @@ title: Understanding the HTML DOM
 
 The HTML DOM is the lense through which our code to create a Web page is viewed by the Web browser. Understanding the HTML DOM is critical for using JavaScript to make dynamic Web pages. Potential employers often ask Front-End applicants to explain how well they understand the DOM because everything JavaScript does to a Web page is accomplished by interfacing with it. This article explains the connection.
 
-![Image alt]({{ site.baseurl }}/assets/images/dom.jpg)
+![Viewing code through seeing glasses]({{ site.baseurl }}/assets/images/dom.jpg)
 
 - [Before the DOM: A Short Introduction to the Web](#before-the-dom-a-short-introduction-to-the-web)
     - [The Internet](#the-internet)

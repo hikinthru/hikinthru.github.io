@@ -1,17 +1,21 @@
 ---
 image: domain.jpg
-title: "Using Custom Domains On GitHub Pages"
+title: "How to Use Custom Domains On GitHub Pages"
 ---
 
-Configuring your domain name to point to GitHub Pages involves three steps, the first at GitHub in the blog repository (your_username.github.io), and the next two at your domain registrar. These are the steps with GoDaddy as the registrar.
+GitHub Pages is a service by GitHub that provides anyone with free Web hosting for static sites. Every GitHub account is allowed one free site. This makes it *very* economical. The service even allows a user to have a custom domain (e.g., hikinthru.com). Once you have GitHub Pages going this is how you would implement a custom domain.
 
 ![Image alt]({{ site.baseurl }}/assets/images/domain.jpg)
 
-## In the github.io repository, edit or create the CNAME file in the root
+Configuring GitHub Pages to point to your custom domain involves three steps, the first at GitHub in your site repository (your_username.github.io), and the next two at your domain registrar. These instructions make two assumptions, one, you already have a custom domain that you have purchased through a domain registrar (e.g., [GoDaddy](https://www.godaddy.com), [Google Domains](https://domains.google/), etc.) and two, that you already have a [GitHub account](https://github.com/) and have set up your [GitHub Pages](https://pages.github.com/). If either of these is not true just click the links to get started and come back as soon as you're ready.
 
-Add the root domain name, without www., e.g., hikinthru.com.
+## 1. CNAME File on GitHub
 
-## At the domain registrar, change the CNAME record
+In the root of your site's GitHub Pages repository create a text file named simply CNAME, all caps with no extension. Type the root domain name at the top, without www., e.g., hikinthru.com. Save it.
+
+This file is your Canonical Name Record. It is a very simple component of the Domain Name System, or DNS, that all of the content on the Internet is organized by. The CNAME record tells the Internet (really the machines that run it) that even though your site is hosted for example at [hikinthru.github.io](https://hikinthru.github.io) the *actual address* of your site is something different, in my case [hikinthru.com](hikinthru.com).
+
+## CNAME File at Domain Registrar
 
 At the domain registrar (following their instructions for editing your CNAME record), point the CNAME record to your_username.github.io, e.g., hikinthru.github.io.
 
