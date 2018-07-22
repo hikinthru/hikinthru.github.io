@@ -1,6 +1,6 @@
 ---
 image: card-file.jpg
-title: Understanding Python Data Structures, Containers and Collections
+title: "Python: Understanding Data Structures, Containers and Collections"
 ---
   
 When I first began programming in Python I found the way different authors and online sources referred to the processes used for holding and manipulating sets of data somewhat confusing. Three concepts were involved, **data structures**, **containers** and **collections**, and I was not completely sure the terms were consistently referring to the same things as I studied, even in technical documents. 
