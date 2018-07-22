@@ -3,13 +3,11 @@ image: card-file.jpg
 title: "Python: Understanding Data Structures, Containers and Collections"
 ---
   
-When I first began programming in Python I found the way different authors and online sources referred to the processes used for holding and manipulating sets of data somewhat confusing. Three concepts were involved, **data structures**, **containers** and **collections**, and I was not completely sure the terms were consistently referring to the same things as I studied, even in technical documents. 
+When I first began programming in Python I found the way different authors and online sources referred to the processes used for holding and manipulating groups of data somewhat confusing. Three concepts were involved, **data structures**, **containers** and **collections**--and I was not completely sure the terms were consistently referring to the same things as I studied, even in technical documents. 
 
-I did a good bit of research and thought I would share what I learned in this article. I will articulate the methods of organizing groups of data in Python and the associated terminology.
+I did a bit of research and thought I would share what I learned in this article. I'll explain the methods of organizing groups of data in Python and the associated terminology. If you are unfamiliar with Python *data types* I recommend reading [this](http://hikinthru.com/2018/07/22/python-object-types.html) article in my blog as an introduction.
 
 ![Image alt]({{ site.baseurl }}/assets/images/card-file.jpg) 
-
----
 
 #### Contents
 
@@ -22,11 +20,22 @@ I did a good bit of research and thought I would share what I learned in this ar
 
 ### Terms
 
-**Data structures**, **containers** and **collections** in Python are used to describe ways of placing data into sets that can be operated on. Three examples of types of data grouping in Python include dictionaries (`my_dict = {"uno":"one", "dos":"two"}`), lists (`my_list = [3, 4, "five"]`) and tuples (`my_tuple = (6, 7, "zed")`). 
+**Data structures**, **containers** and **collections** in Python are terms used to describe ways of placing discrete pieces of data into groups that can be operated on en masse or selectively. Three examples of types of data grouping in Python include:
 
-I came to realize that the term **data structure** is used informally (even in official Python Documentation) to refer to *both or either* of `container` and `collections`. I then learned that regarding these, in one way containers are a type of collection and in another collections are types of containers.
+```python
+# Dictionaries 
+my_dict = {"uno":"one", "dos":"two"}
 
-This sounds confusing, but it is because all containers (generally) fall in to one of two groups in Python. One group is called **builtins** and the others are **imported**. If you are not sure about the difference between the idea of 'builtin' vs. 'imported' see [this](#built-in-vs-imported-object-types-and-functions) explanation below.
+# Lists 
+my_list = [3, 4, "five"]
+
+# Tuples 
+my_tuple = (6, 7, "zed")
+```
+
+I came to realize that the term **data structure** is used informally (even in official Python Documentation) to refer to *both or either* of "container" and "collections". I then learned that regarding these, in one way containers are a type of collection and in another collections are types of containers.
+
+This sounds confusing, but only because all containers (generally) fall in to one of two groups in Python. One group is called **builtins** and the others are **imported**. If you are not sure about the difference between the idea of 'builtin' vs. 'imported' see [this](#built-in-vs-imported-object-types-and-functions) explanation below.
 
 All containers are a type of collection in the technical sense that to determine if an object, for example `my_list` is a container, you ask Python, `isinstance(object, collections.Container)`. Which implies that by definition all containers are a Python sub-class of the class `collections`.
 

@@ -14,9 +14,9 @@ All Python objects have three basic properties (which can be and often are added
 - [An Object's Identity](#an-objects-identity)
 - [Object Types](#object-types)
 - [Object Values](#object-values)
-- [Conclusion](#conclusion)
+  - [Conclusion](#conclusion)
 
-#### An Object's Identity
+### An Object's Identity
 An object's *identity*, or `id()`, is essentially its numeric address in memory (RAM). That is, where it can be found and accessed when it is needed.
 
 ```python
@@ -27,7 +27,7 @@ An object's *identity*, or `id()`, is essentially its numeric address in memory 
 
 The physical memory cell addressed (numbered) at 1526820608 is the the beginning cell in memory the computer will go to to access the information for the variable `x`. 
 
-#### Object Types
+### Object Types
 An object's *type* describes what category the information in that object falls into; this defines what operations can be performed on it. If the object contains text its type is `str` (pronounced like 'stir'). If it is a decimal fraction it is a `float`. If it is a whole number it is an `int`. `True` and `False` are called *conditionals* and are type `bool`.
 
 Python also provides object types that are *containers* for other objects like the ones we just covered (strings, numbers, etc.). Three commonly used container types in Python include *lists*, *dictionaries* and *tuples*. Lists, or type `list`, are groups of zero or more distinct pieces of data such as the names of all of the elements, or all of the meta information about a music album. Dictionaries, or type `dict` are *key: value* pairs such as the names of all of the elements as keys with their atomic numbers as values, or that music album's meta-information including labels as keys for each piece of data like **Title** or **Year**. Tuples (pronounced 'toople' or 'tupple', whichever pleases you), or type `tuple` are similar to lists in that they hold groups of discrete data, however they cannot be modified after they are created (they are great for data that shouldn't be changed because it can't be) and are also faster to search through large datasets due to less overhead than modifiable lists.
@@ -66,7 +66,7 @@ In order to use computer resources efficiently containers don't actually hold th
 60
 ```
 
-#### Object Values
+### Object Values
 
 The actual data, say the number 10, is the *value* of the object, for example our variable `x` above. 
 
