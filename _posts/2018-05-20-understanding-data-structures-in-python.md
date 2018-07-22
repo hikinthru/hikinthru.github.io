@@ -3,9 +3,9 @@ image: card-file.jpg
 title: Understanding Python Data Structures, Containers and Collections
 ---
   
-When I first began programming in Python I was sometimes confused by the way different authors and online sources referred to the various ways of holding, manipulating and processing sets of data. Three terms that kept coming up were **data structures**, **containers** and **collections**, and I was not completely sure they were always referring to the same things, even in technical documents. 
+When I first began programming in Python I found the way different authors and online sources referred to the processes used for holding and manipulating sets of data somewhat confusing. Three concepts were involved, **data structures**, **containers** and **collections**, and I was not completely sure the terms were consistently referring to the same things as I studied, even in technical documents. 
 
-I did a bit of research and this article came out of that. This does not address the functionality of specific container types in Python here such as `list`, `deque`, `tuple`, etc., it simply clarifies the methods of organization of groups of data and the associated terminology.
+I did a good bit of research and thought I would share what I learned in this article. I will articulate the methods of organizing groups of data in Python and the associated terminology.
 
 ![Image alt]({{ site.baseurl }}/assets/images/card-file.jpg) 
 
@@ -22,7 +22,7 @@ I did a bit of research and this article came out of that. This does not address
 
 ### Terms
 
-At base, all three of these terms in Python refer to ways of placing data into sets that can be operated on. Three examples of types of data grouping in Python include dictionaries (`my_dict = {"uno":"one", "dos":"two"}`), lists (`my_list = [3, 4, "five"]`) and tuples (`my_tuple = (6, 7, "zed")`). 
+**Data structures**, **containers** and **collections** in Python are used to describe ways of placing data into sets that can be operated on. Three examples of types of data grouping in Python include dictionaries (`my_dict = {"uno":"one", "dos":"two"}`), lists (`my_list = [3, 4, "five"]`) and tuples (`my_tuple = (6, 7, "zed")`). 
 
 I came to realize that the term **data structure** is used informally (even in official Python Documentation) to refer to *both or either* of `container` and `collections`. I then learned that regarding these, in one way containers are a type of collection and in another collections are types of containers.
 
