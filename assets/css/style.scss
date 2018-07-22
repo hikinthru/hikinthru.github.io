@@ -10,6 +10,10 @@
   font-style: normal;
 }
 
+.articles {
+  font-weight: bold;
+}
+
 .photo {
   float: left;
   padding-top: 5px;
@@ -19,13 +23,17 @@
   height: 85px;
 }
 
+h1, h2, h3, h4, h5 {
+  // margin-bottom: .9em !important;
+}
+
 .hikinthru {
   margin-bottom: -.25em;
 }
 
 .date {
   color: black;
-  margin-top: 25em;
+  margin-top: 250em;
 }
 
 .scrolling {
@@ -36,6 +44,7 @@
   padding-bottom: 1.5em;
   padding-top: 1em;
 }
+
 // To remove the space after the Post Title on the Index page
 .post-list { 
   display: inline; 
