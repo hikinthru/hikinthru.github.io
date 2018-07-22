@@ -1,5 +1,5 @@
 ---
-image: card-file.jpg
+image: nasa-43569-unsplash.jpg
 title: "Python: Understanding Objects and Types"
 ---
 
