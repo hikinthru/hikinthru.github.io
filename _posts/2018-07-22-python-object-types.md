@@ -3,9 +3,18 @@ image: nasa-43569-unsplash.jpg
 title: "Python: Understanding Objects and Types"
 ---
 
-Python is an *object-oriented programming* (OOP) language. An *object* in computer programming essentially refers to a package of information--or *data*, that is active in the computer's memory (has a location and address, just like an apartment in a city) and that some program is aware of. A Python program sees everything that it knows of (variables that have been assigned, functions or methods that have been called, lists or dictionaries that have been defined) as either objects or the relations between them. You can almost see objects as physical things from the fact that if they are instantiated (i.e., the program knows about them), they are occupying cells of space in the computer's RAM. All Python objects have three basic properties (which can be added to in making the object more functional): an identity (its address), a type and a value.
+Python is an *object-oriented programming* (OOP) language. An *object* in computer programming essentially refers to a package of information--or *data*, that is active in the computer's memory (has a location and address, just like an apartment in a city) and that some program is aware of. Objects are a way of efficiently and flexibly organizing the data and information that a program uses to do what it is designed to do. A Python program sees everything that it currently knows (variables that have been assigned, functions or methods that have been called, lists or dictionaries that have been defined) as either objects or the relationships between them. You can almost think of objects as physical things from the fact that if they have been instantiated (i.e., the program knows about them), they are occupying cells of space in the computer's RAM. 
+
+All Python objects have three basic properties (which can be and often are added to by the programmer) discussed below: an **identity** (the exact location where it can be found in the computer's memory), a **type** (what family of objects it belongs to) and a **value** (the useful information it holds).
 
 ![Photo by NASA on Unsplash]({{ site.baseurl }}/assets/images/nasa-43569-unsplash.jpg) 
+
+#### Contents: <!-- omit in toc -->
+
+- [An Object's Identity](#an-objects-identity)
+- [Object Types](#object-types)
+- [Object Values](#object-values)
+- [Conclusion](#conclusion)
 
 #### An Object's Identity
 An object's *identity*, or `id()`, is essentially its numeric address in memory (RAM). That is, where it can be found and accessed when it is needed.
@@ -31,7 +40,7 @@ In order to use computer resources efficiently containers don't actually hold th
 
 # Check its type
 >>> type(x)
-<class 'int'>
+<class `int`>
 
 # Create some more variables
 >>> y = 20
