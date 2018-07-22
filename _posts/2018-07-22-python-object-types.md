@@ -31,7 +31,7 @@ In order to use computer resources efficiently containers don't actually hold th
 
 # Check its type
 >>> type(x)
-<class 'int'>
+<class `int`>
 
 # Create some more variables
 >>> y = 20
