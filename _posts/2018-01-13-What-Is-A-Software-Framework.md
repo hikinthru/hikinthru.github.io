@@ -1,9 +1,9 @@
 ---
 image: framework.jpg
-title: "What Is A Software Framework?"
+title: "What Does 'Software Framework' Mean?"
 ---
 
-In beginning to study Web Development the term *framework* is very common, but what does it actually mean? A quick Google search on the term *framework* returns:
+In beginning to study Web Development the term *framework* is very common, but what does it actually mean? A quick Google search on the word *framework* returns:
 
 > a basic structure underlying a system, concept, or text.
 

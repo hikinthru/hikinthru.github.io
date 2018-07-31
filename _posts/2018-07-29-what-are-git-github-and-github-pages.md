@@ -1,13 +1,13 @@
 ---
 image: j-zamora-267753-unsplash.jpg
-title: What are Git, GitHub, and GitHub Pages?
+title: Demystifying Git, GitHub, and GitHub Pages
 ---
 
-I use all three today but when I first began with git about two years ago I did not completely understand the 'gitverse'. These three things, Git, GitHub, and GitHub Pages are very related but completely different. They all grew out of 'git', a necessity when it was created.  
-
-Linus Torvalds, the developer of Linux, wrote the program git in 2005 to manage the development and evolution of the Linux kernel, which was and is being contributed to by many, many developers. Their previous solution for managing this collaboration, [BitKeeper](https://en.wikipedia.org/wiki/BitKeeper), was no longer workable so Torvalds began a new project to replace it and called it 'git.' The full use of git assumes that a server (i.e., any application running on a computer that serves information that other applications can access, which may be the computer running the accessing program, or may be in Australia) exists somewhere that holds the code for some application, and everyone that needs to can access it, edit it and improve it, without creating clashes of changes. That is git.
+I use all three today but when I first began with git about two years ago I did not completely understand the 'gitverse'. These three things, Git, GitHub, and GitHub Pages are closely related but have very different functions. They all grew out of 'git', a necessity when it was first created.  
 
 ![Photo by j zamora on Unsplash]({{ site.baseurl }}/assets/images/j-zamora-267753-unsplash.jpg)
+
+Linus Torvalds, the developer of Linux, wrote the program git in 2005 to manage the development and evolution of the Linux kernel, which was and is being contributed to by many, many developers. Their previous solution for managing this collaboration, [BitKeeper](https://en.wikipedia.org/wiki/BitKeeper), was no longer workable so Torvalds began a new project to replace it and called it 'git.' The full use of git assumes that a server (i.e., any application running on a computer that serves information that other applications can access, which may be the computer running the accessing program, or may be in Australia) exists somewhere that holds the code for some application, and everyone that needs to can access it, edit it and improve it, without creating clashes of changes. That is git.
 
 #### git ####
 

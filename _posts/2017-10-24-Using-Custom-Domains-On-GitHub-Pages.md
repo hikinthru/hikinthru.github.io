@@ -1,6 +1,6 @@
 ---
 image: domain.jpg
-title: "How to Use a Custom Domain On GitHub Pages"
+title: "Using a Custom Domain On GitHub Pages"
 ---
 
 GitHub Pages is a service by GitHub that provides anyone with free Web hosting for static sites. Every GitHub account is allowed one free site. This makes it *very* economical. The service even allows a user to have a custom domain (e.g., hikinthru.com). Once you have GitHub Pages going this is how you would implement a custom domain.
