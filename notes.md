@@ -1,6 +1,7 @@
 
 ## TODO
 
+- Increase font size, make white
 - There is a jump when going to "About" or "Contacts", a re-alignment of the page, fix it
 - Add typewriter font, read: http://www.1001fonts.com/typewriter-fonts.html
 - x Add three recents posts (only) to side bar
