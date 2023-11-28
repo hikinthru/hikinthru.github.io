@@ -10,17 +10,22 @@ permalink: contact.html
   <hr>
 
   <!-- Contact form -->
-  <form action="https://getsimpleform.com/messages?form_api_token=516b070660cdd452ba701251d724ffc4" method="post">
 
-    <!-- the redirect_to  -->
-    <input type='hidden' name='redirect_to' value='http://hikinthru.com/thank-you.html' />
+  <!--
+  <form action="https://formsubmit.co/your@email.com" method="POST">
+    <input type="text" name="name" required>
+    <input type="email" name="email" required>
+    <button type="submit">Send</button>
+  </form>
+-->
+  <form action="https://formsubmit.co/sherrie@fuqua.net" method="POST">
 
-    <!-- all your input fields here.... -->
+    <!-- input fields -->
     <p>Your Name:<br>
-    <input type='text' name='name' size='35'></p>
+    <input type='text' name='name' size='35' required></p>
 
-    <p>Email (if you would like a reply):<br>
-    <input type='text' name='email' size='35'></p>
+    <p>Email:<br>
+    <input type='text' name='email' size='35' required></p>
 
     <p>Subject:<br>
     <input type='text' name='subject' size='35'></p>
@@ -28,7 +33,14 @@ permalink: contact.html
     <p>Your message:<br>
     <textarea name="message" rows='7' cols='35'></textarea></p>
     
-    <p><input type='submit' value='Send'></p>
+    <p><button type="submit">Send</button></p>
+
+    <!-- no recaptcha, redirect and autoresponse  -->
+    <input type="hidden" name="_captcha" value="false">
+
+    <input type='hidden' name='_next' value='http://hikinthru.com/thank-you.html' />
+
+    <input type="hidden" name="_autoresponse" value="Thank you for your message, if requested I will reply as soon as possible.">
 
   </form>
 
