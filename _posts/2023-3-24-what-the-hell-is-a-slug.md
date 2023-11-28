@@ -3,6 +3,8 @@ image: slug-adrien-stachowiak.jpg
 title: "What the Hell is a Slug?"
 ---
 
+![Image alt]({{ site.baseurl }}/assets/images/slug-adrien-stachowiak.jpg) 
+
 I hadn't used GitHub in a while the other day and needed to download a repository for a Python tool that I wanted to use. While reading the documentation I came across a reference to the author's "slug." It sounded sort of derisive at first glance and my curiosity was piqued by there being a geek term out there that I hadn't noticed before. 
 
 What I learned is that the term "slug" refers to a URL-friendly version of a string, typically used in the context of a repository or user names in URLs. It's a way to represent a human-readable string with URL-encoded characters to ensure compatibility with web browsers and adhere to URL standards.
