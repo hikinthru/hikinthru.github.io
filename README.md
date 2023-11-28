@@ -12,9 +12,7 @@ Online my username and alias is 'hikinthru' and is how I can be located on Faceb
 
 I have spent more than twenty years in Information Technology: troubleshooting, repairing and supporting PC, Mac and server hardware and operating systems, productivity software and enterprise and network applications; database administration; and teaching and developing technical certification courses.
 
-My hobbies today include Web Development, Python programming, and studying Data Science, most recently through [edX and UC San Diego's Micromasters of Data Science](https://www.edx.org/micromasters/data-science) series.
-
-I currently live in a small town in East Texas and work in Quality Assurance for a food processing plant owned by Pilgrim's Pride and JBS-US.
+My hobbies today include Web Development, Python programming, and studying Data Science and Machine Learning
 
 If you are interested you may view my resume [here](/assets/images/Sherrie-L-Fuqua-Resume.pdf).
 
@@ -30,6 +28,6 @@ Jekyll, by design, allows me to make a change to the left column content, add or
 
 My site uses Git for version control. Git is a separate thing from GitHub which is an online repository where my code lives, and GitHub Pages which provides online hosting services for my code. Git is a small program that you install on your development computer and provides *version control* for your project. Using Git means that if I make a change to a page and for example delete a paragraph without realizing it, I can go back the next day to a previous, saved version (the version saving happens automatically whenever I make something called a *commit*). This is obviously far more critical (and really designed for) developers working on large projects, especially if multiple developers are involved. Git was created by Linus Torvalds (creator of Linux) to provide source control management for open source projects, originally the Linux kernel project.
 
-Git also provides the mechanism that synchronizes the code and content that I write on my computer, and the GitHub repository (free for you to view at [https://github.com/hikinthru](https://github.com/hikinthru) where my code is saved, and in the case of this site, hosted.
+Git also provides the mechanism that synchronizes the code and content that I write on my computer, and the GitHub repository (free for you to view at [https://github.com/hikinthru](https://github.com/hikinthru)) where my code is saved, and in the case of this site, hosted.
 
-If you would like information on any of the technologies I have used here feel free to (contact.html">contact] me.
+If you would like information on any of the technologies I have used here feel free to [contact](contact.html") me.
