@@ -4,5 +4,14 @@
 			"path": "."
 		}
     ],
-    "settings": {}
+    "settings": {
+        "spellchecker.ignoreWordsList": [
+            "Stylebook",
+            "Wikipedia",
+            "johndoe",
+            "JohnDoe",
+            "slugline",
+            "metalurgy"
+        ]
+    }
 }
