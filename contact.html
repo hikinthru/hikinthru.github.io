@@ -17,7 +17,7 @@ permalink: contact.html
     <input type="email" name="email" required>
     <button type="submit">Send</button>
   </form>
--->
+  -->
   <form action="https://formsubmit.co/sherrie@fuqua.net" method="POST">
 
     <!-- input fields -->
@@ -32,11 +32,15 @@ permalink: contact.html
 
     <p>Your message:<br>
     <textarea name="message" rows='7' cols='35'></textarea></p>
+
+    <!-- recaptcha (added 3/16/2024)-->
+    <div class="g-recaptcha" data-sitekey="6LdSL5spAAAAABBiBLiUF2hFCl61_njuTSyU6odF" data-action="LOGIN"></div>
+    <br/>
     
     <p><button type="submit">Send</button></p>
 
     <!-- no recaptcha, redirect and autoresponse  -->
-    <input type="hidden" name="_captcha" value="false">
+    <!--<input type="hidden" name="_captcha" value="false"> -->
 
     <input type='hidden' name='_next' value='http://hikinthru.com/thank-you.html' />
 
